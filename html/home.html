@@ -107,17 +107,20 @@
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
-            <label class="label font-medium text-neutral">Select Bank</label>
+            
+            <!-- input btn  1 -->
+            <label class="label font-medium text-neutral">Select A Bank</label>
             <select
               id="add-money-bnk"
               class="select w-full bg-base-200 rounded-full"
             >
-              <option disabled selected>Select back</option>
+              <option disabled selected>Select bank</option>
               <option value="DBBL">DBBL</option>
               <option value="IBBL">IBBL</option>
               <option value="City Bank">City Bank</option>
             </select>
             <br />
+            <!-- input btn  2 -->
 
             <label class="label font-medium text-neutral"
               >Bank Account Number</label
@@ -127,11 +130,13 @@
               type="text"
               maxlength="11"
               minlength="11"
+              value="01234567890"
               placeholder="Enter 11 digit account number"
               class="input font-light rounded-full bg-base-200 w-full"
             />
             <br />
 
+            <!-- input btn  3 -->
             <label class="label font-medium text-neutral">Amount to Add</label>
             <input
               id="add-money-amount"
@@ -140,10 +145,10 @@
               minlength="11"
               class="input font-light rounded-full bg-base-200 w-full"
               placeholder="Add Amount to withdraw"
-              value="5000"
             />
             <br />
 
+            <!-- input btn  3 -->
             <label class="label font-medium text-neutral">Pin Number</label>
             <input
               id="add-money-pin"
@@ -215,6 +220,7 @@
 
     <!-- script -->
     <script src="/script/machine.js"></script>
+    <script src="/script/addMoney.js"></script>
     <script src="/script/cashout.js"></script>
   </body>
 </html>
