@@ -20,5 +20,22 @@ function getBalence() {
 function setBalance(value) {
   const balanceElement = document.getElementById("balance");
   balanceElement.innerText = value;
-  
+}
+
+// mechine id -> hidden all -> show all
+function showOnly(id) {
+  const addmoney = document.getElementById("add-money");
+  const cashout = document.getElementById("cashout");
+  // console.log(`addMoney - ${addmoney} , Cashout ${cashout}`);
+
+  // shobaike hide kore dao
+  addmoney.classList.add("hidden");
+  cashout.classList.add("hidden");
+
+  // id wala element ta ke tumi show koro
+  const addmoneyH = document.getElementById(id);
+  addmoneyH.classList.remove("hidden");
+
+  const cashoutH = document.getElementById(id);
+  cashoutH.classList.remove("hidden");
 }

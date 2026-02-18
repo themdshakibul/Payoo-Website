@@ -69,45 +69,50 @@
       <!-- button -->
       <div class="buttons grid grid-cols-3 gap-3">
         <!-- btn 1 -->
-        <div class="btn flex-col h-full py-4 btn-soft btn-primary">
+        <div
+          onclick="showOnly('add-money')"
+          class="btn flex-col h-full py-4 btn-soft btn-primary"
+        >
           <img src="../assets/opt-1.png" alt="" />
           <p>Add Money</p>
         </div>
         <!-- btn 2 -->
-        <div class="btn flex-col h-full py-4 btn-soft btn-primary">
+        <div
+          onclick="showOnly('cashout')"
+          class="btn flex-col h-full py-4 btn-soft btn-primary"
+        >
           <img src="../assets/opt-2.png" alt="" />
-          <p>Add Money</p>
+          <p>Cashout</p>
         </div>
         <!-- btn 3 -->
         <div class="btn flex-col h-full py-4 btn-soft btn-primary">
           <img src="../assets/opt-3.png" alt="" />
-          <p>Add Money</p>
+          <p>Transfer Money</p>
         </div>
         <!-- btn 4 -->
         <div class="btn flex-col h-full py-4 btn-soft btn-primary">
           <img src="../assets/opt-4.png" alt="" />
-          <p>Add Money</p>
+          <p>Get Bonus</p>
         </div>
         <!-- btn 5 -->
         <div class="btn flex-col h-full py-4 btn-soft btn-primary">
           <img src="../assets/opt-5.png" alt="" />
-          <p>Add Money</p>
+          <p>Pay Bill</p>
         </div>
         <!-- btn 6 -->
         <div class="btn flex-col h-full py-4 btn-soft btn-primary">
           <img src="../assets/opt-6.png" alt="" />
-          <p>Add Money</p>
+          <p>Transactions</p>
         </div>
       </div>
     </section>
 
     <!-- Add Money section -->
-    <section id="add-money" class="w-11/12 mx-auto py-10 space-y-5">
+    <section id="add-money" class="w-11/12 mx-auto py-10 space-y-5 hidden">
       <h2 class="text-xl font-bold mb-5">Add Money</h2>
       <div class="card bg-base-100 w-full shadow rounded-2xl">
         <div class="card-body">
           <fieldset class="fieldset">
-            
             <!-- input btn  1 -->
             <label class="label font-medium text-neutral">Select A Bank</label>
             <select
