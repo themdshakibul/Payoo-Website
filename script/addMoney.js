@@ -37,7 +37,8 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     newHistory.innerHTML = `
     <div class="transaction-card p-5 bg-base-100">
       Add mony Successfull form  
-        ${bankAccount} , Acc-No  ${accno}  at ${new Date()}
+        ${bankAccount} , Acc-No  ${accno}  at  ${new Date().toLocaleString("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit" })}
+
     </div>
     
     `;
