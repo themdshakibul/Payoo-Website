@@ -9,20 +9,21 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   // 2 get the amount, validate, convart to Number
   const cashoutAmount = getValueFormInput("cashout-amount");
-  console.log(cashoutAmount);
 
   if (cashoutAmount < 0 || cashoutAmount.trim() === "") {
     alert("Amount Undefine");
     return;
   }
 
-  // 3 get the Current Balance, validate, convart to Number
-  const balanceElement = document.getElementById("balance");
-  const balance = balanceElement.innerText;
-  console.log(balance);
+  //   // 3 get the Current Balance, validate, convart to Number
+  //   const balanceElement = document.getElementById("balance");
+  //   const balance = balanceElement.innerText;
+  //   console.log(balance);
+
+  const currentBalance = getBalence();
 
   // 4 Calculate new Balance
-  const newBlance = Number(balance) - Number(cashoutAmount);
+  const newBlance = currentBalance - Number(cashoutAmount);
   console.log(newBlance);
 
   if (newBlance < 0) {
@@ -30,12 +31,13 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     return;
   }
 
-  // 5 Get the PI and verify
   const cashoutPin = getValueFormInput("cashout-pin");
 
   if (cashoutPin == "1234") {
     alert("Cashout Successfull");
-    balanceElement.innerText = newBlance;
+    // balanceElement.innerText = newBlance;
+    // document.getElementById("balance").innerText = newBlance;
+    setBalance(newBlance);
   } else {
     alert("Invalid Pin");
     return;
