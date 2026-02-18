@@ -1,4 +1,46 @@
+document.getElementById("cashout-btn").addEventListener("click", function () {
+  // 1 get the agent number & validate
+  const cashoutNumber = getValueFormInput("cashout-number");
 
+  if (cashoutNumber.length != 11) {
+    alert("Invalid number");
+    return;
+  }
+
+  // 2 get the amount, validate, convart to Number
+  const cashoutAmount = getValueFormInput("cashout-amount");
+  console.log(cashoutAmount);
+
+  if (cashoutAmount < 0 || cashoutAmount.trim() === "") {
+    alert("Amount Undefine");
+    return;
+  }
+
+  // 3 get the Current Balance, validate, convart to Number
+  const balanceElement = document.getElementById("balance");
+  const balance = balanceElement.innerText;
+  console.log(balance);
+
+  // 4 Calculate new Balance
+  const newBlance = Number(balance) - Number(cashoutAmount);
+  console.log(newBlance);
+
+  if (newBlance < 0) {
+    alert("Invalid Amount");
+    return;
+  }
+
+  // 5 Get the PI and verify
+  const cashoutPin = getValueFormInput("cashout-pin");
+
+  if (cashoutPin == "1234") {
+    alert("Cashout Successfull");
+    balanceElement.innerText = newBlance;
+  } else {
+    alert("Invalid Pin");
+    return;
+  }
+});
 
 // document.getElementById("cashout-btn").addEventListener("click", function () {
 //   // 1 get the agent number & validate
@@ -14,12 +56,18 @@
 //   // 2 get the amount, validate, convart to Number
 //   const cashoutAmountInput = document.getElementById("cashout-amount");
 //   const cashoutAmount = cashoutAmountInput.value;
-//   console.log(cashoutAmount);
+//   console.log("cashoutAmount", cashoutAmount);
+
+//   if (cashoutAmount < 0 || cashoutAmount.trim() === "") {
+//     alert("Amount Undefine");
+//     return;
+//   }
 
 //   // 3 get the Current Balance, validate, convart to Number
 //   const balanceElement = document.getElementById("balance");
 //   const balance = balanceElement.innerText;
 //   console.log(balance);
+
 //   // 4 Calculate new Balance
 
 //   const newBlance = Number(balance) - Number(cashoutAmount);
