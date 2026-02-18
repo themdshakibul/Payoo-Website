@@ -28,6 +28,21 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     ${bankAccount} 
     at ${new Date()}`);
     setBalance(newBalence);
+
+    // 1 history container ke dhore niye asbo
+    const history = document.getElementById("history-container");
+    // 2 new div create korbo
+    const newHistory = document.createElement("div");
+    // 3 new div innerHtml add korbo
+    newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+      Add mony Successfull form  
+        ${bankAccount} , Acc-No  ${accno}  at ${new Date()}
+    </div>
+    
+    `;
+    // 4 history container e newDiv append korbo
+    history.append(newHistory);
   } else {
     alert("Invalid Pin");
     return;
