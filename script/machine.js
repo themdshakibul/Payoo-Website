@@ -1,5 +1,3 @@
-console.log("Machine Added");
-
 // Machine id --> input value
 function getValueFormInput(id) {
   const input = document.getElementById(id);

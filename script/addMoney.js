@@ -29,9 +29,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   const pin = getValueFormInput("add-money-pin");
 
   if (pin == "1234") {
-    alert(`Add mony Successfull form  
-    ${bankAccount} 
-    at ${new Date()}`);
+    alert("Add mony Successfull form");
     setBalance(newBalence);
 
     // 1 history container ke dhore niye asbo
@@ -40,10 +38,20 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     // 3 new div innerHtml add korbo
     newHistory.innerHTML = `
-    <div class="transaction-card p-5 bg-base-100">
-      Add mony Successfull form  
-        ${bankAccount} , Acc-No  ${accno}  at  ${new Date().toLocaleString("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit" })}
-
+    <div
+      class="transaction-card p-5 bg-base-300 rounded-md flex justify-between items-center gap-3"
+      >
+      <img src="../assets/wallet 1.png" alt="" />
+      <div>
+        <h2 class="text-xl font-semibold">Add Money</h2>
+          ${bankAccount} Ac-No ${accno} <br>
+          ${new Date().toLocaleString("en", {
+            weekday: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+          })}
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
     </div>
     
     `;

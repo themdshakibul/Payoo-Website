@@ -1,9 +1,7 @@
-console.log("Transform Money");
-
 document.getElementById("transfor-btn").addEventListener("click", function () {
   const transforNumber = getValueFormInput("number-money-transfor");
   if (transforNumber.length != 11) {
-    alert("Invalid AC-NO");
+    alert("Invalid Ac-No");
     return;
   }
 
