@@ -18,6 +18,11 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   // step 3 --> get amount
   const amount = getValueFormInput("add-money-amount");
 
+  if (amount < 0 || amount.trim() === "") {
+    alert("Amount Undefine");
+    return;
+  }
+
   const newBalence = getBalence() + Number(amount);
   console.log(newBalence);
 
