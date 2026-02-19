@@ -45,8 +45,20 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     // 3 new div innerHtml add korbo
     newHistory.innerHTML = `
-    <div class="transaction-card p-5 bg-base-100">
-      Cashout ${cashoutAmount} TAKA Successfull to  ${cashoutNumber}    ${new Date().toLocaleString("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit" })}
+    <div
+      class="transaction-card p-5 bg-base-300 rounded-md flex justify-between items-center gap-3"
+      >
+      <img src="../assets/wallet 1.png" alt="" />
+      <div>
+        <h2 class="text-xl font-semibold">Cashout</h2>
+          ${cashoutAmount} TK   Cashout ${cashoutNumber} <br>
+          ${new Date().toLocaleString("en", {
+            weekday: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+          })}
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
     </div>
     `;
     // 4 history container e newDiv append korbo
