@@ -16,7 +16,7 @@ document.getElementById("loging-btn").addEventListener("click", function () {
     // 3.1 true --> alert--> homepage
     alert("loging successfull");
     // window.location.replace("../home.html");
-    window.location.assign("Html/home.html");
+    window.location.assign("html/home.html");
   } else {
     // 3.2 true --> alert --> return
     alert("login Failed");
