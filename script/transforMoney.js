@@ -33,16 +33,18 @@ document.getElementById("transfor-btn").addEventListener("click", function () {
     <div
       class="transaction-card p-5 bg-base-300 rounded-md flex justify-between items-center gap-3"
       >
-      <img src="../assets/wallet 1.png" alt="" />
-      <div>
-        <h2 class="text-xl font-semibold">Transfor Money</h2>
-          ${amountTransfor} TK Ac-No ${transforNumber} <br>
-          ${new Date().toLocaleString("en", {
-            weekday: "short",
-            hour: "2-digit",
-            minute: "2-digit",
-          })}
-      </div>
+        <div class="flex gap-5 items-center">
+          <img src="../assets/wallet 1.png" alt="" />
+          <div class="">
+            <h2 class="text-xl font-semibold">Transfor Money</h2>
+            ${amountTransfor} TK Ac-No ${transforNumber} <br>
+            ${new Date().toLocaleString("en", {
+              weekday: "short",
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </div>
+        </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
     </div>
     `;
