@@ -1,35 +1,32 @@
-document.getElementById("add-money-btn").addEventListener("click", function () {
-  // step 1 --> Bank account gate
-  const bankAccount = getValueFormInput("add-money-bnk");
+console.log("Payi bill added");
 
-  if (bankAccount == "Select bank") {
-    alert("Please select a Bank");
+document.getElementById("pay-bill-btn").addEventListener("click", function () {
+  const payBill = getValueFormInput("pay-bill-bnk");
+  console.log(payBill);
+
+  if (payBill == "Select bank") {
+    alert("Please Select a Bank");
     return;
   }
 
-  // step 2 --> gate bank account Number
-  const accno = getValueFormInput("add-money-number");
-
-  if (accno.length != 11) {
-    alert("Invalid Bank Account Number");
+  const billerAccount = getValueFormInput("pay-bill-number");
+  if (billerAccount.length != 11) {
+    alert("Biller Biller Account Number ");
     return;
   }
 
-  // step 3 --> get amount
-  const amount = getValueFormInput("add-money-amount");
-
-  if (amount < 0 || amount.trim() === "") {
+  const billAmount = getValueFormInput("pay-bill-amount");
+  if (billAmount < 0 || billAmount.trim() === "") {
     alert("Amount Undefine");
     return;
   }
 
-  const newBalence = getBalence() + Number(amount);
+  const newBalence = getBalence() - Number(billAmount);
   console.log(newBalence);
 
-  const pin = getValueFormInput("add-money-pin");
-
-  if (pin == "1234") {
-    alert("Add mony Successfull");
+  const billPin = getValueFormInput("pay-bill-pin");
+  if (billPin == "1234") {
+    alert("Paiy Bill Successfull");
     setBalance(newBalence);
 
     // 1 history container ke dhore niye asbo
@@ -44,8 +41,8 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
       <div class="flex gap-5 items-center">
         <img src="../assets/wallet 1.png" alt="" />
           <div class="">
-            <h2 class="text-xl font-semibold">Add Money</h2>
-            ${bankAccount} Ac-No ${accno} <br>
+            <h2 class="text-xl font-semibold">Pay Bill</h2>
+            ${billAmount} TK  ${payBill} Ac-No ${billerAccount} <br>
             ${new Date().toLocaleString("en", {
               weekday: "short",
               hour: "2-digit",
