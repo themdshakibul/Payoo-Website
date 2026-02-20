@@ -34,7 +34,7 @@ document.getElementById("transfor-btn").addEventListener("click", function () {
       class="transaction-card p-5 bg-base-300 rounded-md flex justify-between items-center gap-3"
       >
         <div class="flex gap-5 items-center">
-          <img src="../assets/wallet 1.png" alt="" />
+          <img src="../assets/opt-3.png" alt="" class="bg-white p-2 rounded-full" />
           <div class="">
             <h2 class="text-xl font-semibold">Transfor Money</h2>
             ${amountTransfor} TK Ac-No ${transforNumber} <br>

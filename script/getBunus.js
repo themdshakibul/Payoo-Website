@@ -23,7 +23,7 @@ document.getElementById("bonus-btn").addEventListener("click", function () {
       class="transaction-card p-5 bg-base-300 rounded-md flex justify-between items-center gap-3"
       >
         <div class="flex gap-5 items-center">
-            <img src="../assets/wallet 1.png" alt="" />
+            <img src="../assets/opt-4.png" alt="" class="bg-white p-2 rounded-full" />
             <div class="">
               <h2 class="text-xl font-semibold">Bonus</h2>
               ${BunusAmount} TK ${new Date().toLocaleString("en", {
