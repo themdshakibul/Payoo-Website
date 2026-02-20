@@ -42,4 +42,5 @@ function showOnly(id) {
   // id wala element ta ke tumi show koro
   const selected = document.getElementById(id);
   selected.classList.remove("hidden");
+
 }

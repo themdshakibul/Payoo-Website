@@ -45,7 +45,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
         <img src="../assets/wallet 1.png" alt="" />
           <div class="">
             <h2 class="text-xl font-semibold">Add Money</h2>
-            ${bankAccount} Ac-No ${accno} <br>
+            ${amount}TK  ${bankAccount} Ac-No ${accno} <br>
             ${new Date().toLocaleString("en", {
               weekday: "short",
               hour: "2-digit",
